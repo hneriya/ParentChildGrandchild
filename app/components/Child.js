@@ -1,0 +1,45 @@
+// Include React
+var React = require("react");
+
+// Here we include all of the sub-components
+var GrandChild = require("./GrandChild");
+
+// the child is the componenent that takes up all the space under the jumbotron in parent but only displays actual content on the left third of the page
+var Child = React.createClass({
+  render: function() {
+    return (
+    <div className="row child">
+    <div className="col-md-3">
+
+      <div className="panel panel-default ">
+      
+        <div className="panel-heading">
+          <h3 className="panel-title">box housing the filtering area:</h3>
+        </div>
+        <div className="panel-body text-center">
+              <br></br>
+              <br></br>
+          {/*
+            This component recieves a clicks variable as a prop from it's parent.
+            <h1>{this.props.clicks}</h1>
+          */}
+
+          {/*
+            This component will then render the GrandChild component. It will give GrandChild a prop
+            called "number" which will be calculated by mutiplying this.props.clicks by 2
+          */}
+          <GrandChild number={this.props.clicks * 4} />
+        </div>
+      </div>
+     <div className="col-md-9"></div>
+
+
+      </div>
+     </div>
+   
+    );
+  }
+});
+
+// Export the component back for use in other files
+module.exports = Child;
