@@ -31,28 +31,32 @@ var Parent = React.createClass({
         <div className="row">
           <div className="jumbotron">
               <button className="btn btn-primary btn-lg" id="logout"> logout</button>
-            <h2 >Politihub</h2>
-            <div className="col-md-2 jumbo-category"></div>
-            <button className="col-md-2 btn btn-info jumbo-category">senate</button>
-            <button className="col-md-2 btn btn-info jumbo-category">house</button>
-            <button className="col-md-2 btn btn-info jumbo-category">local</button>
-            <div className="col-md-4 jumbo-category"></div>
+            <h2 >parent component renders everything in this jumbotron</h2>
+            <div className="col-sm-2 jumbo-category"></div>
+            <button className="col-sm-2 btn btn-info jumbo-category">senate</button>
+            <button className="col-sm-2 btn btn-info jumbo-category">house</button>
+            <button className="col-sm-2 btn btn-info jumbo-category">local</button>
+            <div className="col-sm-4 jumbo-category"></div>
             <br></br>
 
             <p>
               {/* Here we create a button click.
-              Note how we have an onClick event associate with our handleClick function. */}
+              Note how we have an onClick event associate with our handleClick function. 
+
               <button className="btn btn-primary btn-lg" onClick={this.handleClick}>CLICK ME!!!!</button>
-              {/* Here we create a button click for resetting the clickCounter */}
               <button className="btn btn-danger btn-lg" onClick={this.resetClick}>Reset</button>
+
+
+            */}
+
             </p>
 
           </div>
 
-          <div className="col-md-12 parent">
+          <div className="col-sm-12 parent">
             <div className="panel panel-default">
               <div className="panel-heading">
-                <h3 className="panel-title text-center">this is the box housing parent</h3>
+                <p className="panel-title text-center">the parent component covers the entire page HOWEVER it only actually renders the jumbotron. anything below here is the "child" component and the "grandchild" is nested inside the child.</p>
               </div>
               <div className="panel-body text-center">
               <br></br>

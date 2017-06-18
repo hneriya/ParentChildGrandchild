@@ -9,7 +9,7 @@ var Child = React.createClass({
   render: function() {
     return (
     <div className="row child">
-    <div className="col-md-3">
+    <div className="col-sm-3">
 
       <div className="panel panel-default ">
       
@@ -28,13 +28,13 @@ var Child = React.createClass({
             This component will then render the GrandChild component. It will give GrandChild a prop
             called "number" which will be calculated by mutiplying this.props.clicks by 2
           */}
-          <GrandChild number={this.props.clicks * 4} />
+          <h3> here we insert all of the work elmas did on the left hand column with all the sorting info </h3>
         </div>
       </div>
-     <div className="col-md-9"></div>
-
-
       </div>
+         <div className="col-sm-9">
+          <GrandChild number={this.props.clicks * 4} />
+         </div>
      </div>
    
     );
