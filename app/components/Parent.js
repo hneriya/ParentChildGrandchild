@@ -27,42 +27,30 @@ var Parent = React.createClass({
   // Here we render the function
   render: function() {
     return (
-      <div className="container-fluid">
+        <div className="container-fluid parent">
         <div className="row">
-          <div className="jumbotron">
-              <button className="btn btn-primary btn-lg" id="logout"> logout</button>
-            <h2 >parent component renders everything in this jumbotron</h2>
-            <div className="col-sm-2 jumbo-category"></div>
-            <button className="col-sm-2 btn btn-info jumbo-category">senate</button>
-            <button className="col-sm-2 btn btn-info jumbo-category">house</button>
-            <button className="col-sm-2 btn btn-info jumbo-category">local</button>
-            <div className="col-sm-4 jumbo-category"></div>
-            <br></br>
-
-            <p>
-              {/* Here we create a button click.
-              Note how we have an onClick event associate with our handleClick function. 
-
-              <button className="btn btn-primary btn-lg" onClick={this.handleClick}>CLICK ME!!!!</button>
-              <button className="btn btn-danger btn-lg" onClick={this.resetClick}>Reset</button>
-
-
-            */}
-
-            </p>
-
-          </div>
-
-          <div className="col-sm-12 parent">
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <p className="panel-title text-center">the parent component covers the entire page HOWEVER it only actually renders the jumbotron. anything below here is the "child" component and the "grandchild" is nested inside the child.</p>
-              </div>
-              <div className="panel-body text-center">
-              <br></br>
-              <br></br>
-
-                {/* This is where we'll show the click count for the parent **<h1>{this.state.clicks}</h1>** */}
+            <div className="col-md-12 title">
+                <img src="./images/wh.png" className="logo" /> PolitiHub
+                <div className= "elmasA">
+                    <button type="button" href="" className="btn glyphicon glyphicon-user personal"></button>
+                    <button type="button" className="btn personal"> Logout</button>
+                </div>
+            </div>
+        </div>
+    <div className="container-fluid">
+        <div className="row col-md-12 button-row">
+            <div className="elmasAA">
+                <div className="col-md-6">
+                    <p>
+                        {/* Here we create a button click. Note how we have an onClick event associate with our handleClick function.
+                        <button className="btn btn-primary btn-lg" onClick={this.handleClick}>CLICK ME!!!!</button>
+                        <button className="btn btn-danger btn-lg" onClick={this.resetClick}>Reset</button>
+                        */}
+                    </p>
+                </div>
+            </div>
+            <div className="col-md-12">
+                            {/* This is where we'll show the click count for the parent **<h1>{this.state.clicks}</h1>** */}
 
                     {/*
                   Here we'll render the Child component.
@@ -71,14 +59,21 @@ var Parent = React.createClass({
                   i.e.
                   <ComponentName propName={propValue} />
                 */}
-                <Child clicks={this.state.clicks * 2} />
+                <div className="btn btn-group-justified">
+                    <a href="#" className="btn categories">House</a>
+                    <a href="#" className="btn categories">Senate</a>
+                    <a href="#" className="btn categories">State</a>
+                    <a href="#" className="btn categories">Local</a>
 
-              </div>
+                </div>
             </div>
-          </div>
-
         </div>
+    </div>
+
+      <Child clicks={this.state.clicks * 2} />
+
       </div>
+
     );
   }
 });

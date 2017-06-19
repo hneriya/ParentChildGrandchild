@@ -8,8 +8,8 @@ var GrandChild = require("./GrandChild");
 var Child = React.createClass({
   render: function() {
     return (
-    <div className="row child">
-    <div className="col-sm-3">
+    <div className="row child main-area">
+    <div className="col-sm-3 filter-box">
 
       <div className="panel panel-default ">
       

@@ -6,7 +6,7 @@ var GrandChild = React.createClass({
   render: function() {
     return (
     <div className="row grandchild">
-    <div className="col-sm-12">
+    <div className="col-sm-12 display-box">
       
       <div className="panel panel-default ">
         <div className="panel-heading">
